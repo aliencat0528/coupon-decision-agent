@@ -1,0 +1,5 @@
+# 資料與環境不進版控；REPORT.md（主交付物）進版控
+.venv/
+data/
+reports/
+__pycache__/
