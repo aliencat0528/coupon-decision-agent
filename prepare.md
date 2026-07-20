@@ -1,7 +1,8 @@
 # Prepare — coupon-decision-agent 決策記錄
 
 > 記錄規則繼承根 `prepare.md`，此處只寫差異。編號前綴 `CA-`。
-> 完整規劃書（觀念先修、商業考量、開發流程與出口條件、面試 Q&A）：（Artifact 連結待補）
+> 完整規劃書（觀念先修、商業考量、開發流程與出口條件、面試 Q&A）：
+> https://claude.ai/code/artifact/c58198fe-d276-47bd-a527-1e08a1a693dd
 
 ---
 
