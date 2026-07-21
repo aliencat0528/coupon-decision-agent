@@ -8,6 +8,13 @@
 
 ## 決策日誌（新的在上）
 
+### CA-004 · 2026-07-21 · outcome 口徑定案（← 待討論 #2 結案）
+- **決策**（用戶拍板）：uplift outcome 用 `spend`（連續金額）——非 visit（15% 但非金額事件、
+  需一個沒估過的「造訪→購買」代理）、非 conversion（0.9% 太稀疏，逐人 CI 幾乎全跨零→近乎全 ABSTAIN）
+- **EV 口徑修正 CA-003**：`tau_spend × 毛利率 − 券面額 × 兌換率`；tau 改吃 spend、不再乘固定客單價
+- **落地細節**（排專案一深化時段，非現在）：uplift 換 regressor T-learner；conversion 留作報告次要
+  outcome 佐證方向；spend 零膨脹較吵 → 靠 bootstrap CI，吵的自然落 ABSTAIN
+
 ### CA-003 · 2026-07-20
 - **決策**：EV 口徑 = tau × 客單價 × 毛利率 − 券面額 × 兌換率；outcome 用 conversion
 - **落地細節**：Hillstrom 落地時暫用 `visit`（conversion 僅 ~0.9% 太稀疏，見待討論 #2）；
@@ -35,5 +42,5 @@
 | # | 議題 | 卡在什麼 | 提出日期 |
 |---|------|---------|---------|
 | 1 | REVIEW_COST 與 CI 百分位的校準 | 需 H4：對 ABSTAIN 率做敏感度分析後定案 | 2026-07-20 |
-| 2 | Hillstrom outcome 用 visit 還是 conversion | conversion 太稀疏；visit 非金額事件，EV 口徑要重議 | 2026-07-20 |
+| ~~2~~ | ~~Hillstrom outcome 用 visit 還是 conversion~~ | 已結案 → CA-004 定為 `spend` | 2026-07-20 |
 | 3 | LLM 編排層（解釋、假設生成）何時加入 | MVP 不含；等 backtest 穩定後再議（規劃書 Phase 4） | 2026-07-20 |
